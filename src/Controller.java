@@ -532,7 +532,7 @@ public class Controller
 	boolean help2 = false;
 	public void count(int a, boolean b)
 	{
-		int npoint = 100;
+		int npoint = dyslokacje.k;
 		if(help1)
 		{
 			dyslokacje.countro(n*m); //licze dyslokacje

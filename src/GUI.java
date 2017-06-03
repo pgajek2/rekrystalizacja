@@ -49,6 +49,7 @@ public class GUI
 	ButtonGroup losowaniezarodkow;
 	JTextField N;
 	JTextField R;
+	JTextField k;
 	JTextField roz1, roz2;
 	JLabel nap1;
 	JLabel nap2;
@@ -457,6 +458,7 @@ public class GUI
 		group = new ButtonGroup();
 		N = new JTextField("10");
 		R = new JTextField("5");
+		k = new JTextField("1000");
 		roz1 = new JTextField("50");
 		roz2 = new JTextField("50");
 		nap1 = new JLabel("n:");
@@ -521,6 +523,8 @@ public class GUI
 		R.setSize(60, 20);
 		R.setLocation(230, 100);
 		R.setEnabled(false);
+		k.setSize(60,20);
+		k.setLocation(310,130);
 		nap2.setSize(60, 20);
 		nap2.setLocation(200, 100);
 		ok.setSize(60,20);
@@ -585,6 +589,7 @@ public class GUI
 		sterowanie.add(info);
 		sterowanie.add(roz1);
 		sterowanie.add(roz2);
+		sterowanie.add(k);
 		sterowanie.setLayout(null);
 		sterowanie.setSize(800,200);
 		sterowanie.setLocation(0, 0);
@@ -651,7 +656,7 @@ public class GUI
 	void startcount()
 	{			
 		boolean w = true;
-		
+		controller.dyslokacje.k = Integer.parseInt(k.getText());
 		if(periodyczne.isSelected())
 		{
 		    w = true;
@@ -700,7 +705,7 @@ public class GUI
 				     controller.dyslokacje.tabdyslokacji[i][j]=0;
 				     info.setText("REKRYSTALIZACJA");
 				}
-				//if(controller.board[i][j]!=0)
+				if(controller.board[i][j]!=0)
 				{
 					tab[i][j].setBackground(ID_Color.get(ID.get(controller.board[i][j])));
 				}

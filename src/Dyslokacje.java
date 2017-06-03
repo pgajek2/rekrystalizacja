@@ -14,7 +14,7 @@ public class Dyslokacje
 	double sum = 0;
 	double alldyslokacje = 0;
 	int N,M;
-	int k = 1000;
+	int k = 100;
 	double beginro = 0;
 	
 	Dyslokacje(int n, int m)
